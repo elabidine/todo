@@ -24,7 +24,6 @@ class UserRegisterView(APIView):
             serializer.save()
             return Response(serializer.data)
 
-
 class UserViewDetails(APIView):
   def get(self, request,id):
     user = get_object_or_404(CustomUser,pk=id)
